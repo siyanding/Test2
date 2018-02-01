@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="opencv-249">
+    <CLASSES>
+      <root url="jar://D:/software/openCV-2.4.9/opencv/build/java/opencv-249.jar!/" />
+      <root url="jar://D:/jars/poi-3.17/poi-3.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/software/openCV-2.4.9/opencv/build/java/opencv-249.jar!/" />
+    </SOURCES>
+  </library>
+</component>

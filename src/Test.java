@@ -1,17 +1,12 @@
 import org.opencv.core.*;
-import org.opencv.features2d.DescriptorExtractor;
-import org.opencv.features2d.DescriptorMatcher;
-import org.opencv.features2d.FeatureDetector;
-import org.opencv.features2d.Features2d;
+import org.opencv.features2d.*;
 import org.opencv.highgui.Highgui;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.objdetect.CascadeClassifier;
+import java.io.File;
+import pixeljelly.gui.ImageComponent;
 
+import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 import java.util.List;
-
-import static org.opencv.imgcodecs.Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE;
 
 public class Test {
 
@@ -19,29 +14,62 @@ public class Test {
     //Mat img = new Mat(), templ = new Mat();
     //Mat mask = new Mat();
 
-    public static void main(String[] args) {
+    Mat src,dst;
+
+    //public static void main(String[] args) {
+    //    //Test test = new Test();
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Up.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Down.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Left.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Right.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10TopLeft.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10BottomRight.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10TopRight.jpg");
+    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10BottomLeft.jpg");
+	//
+    //}
+
+    //public static void main(String[] args) {
+    //    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    //    Mat src = Highgui.imread("D:\\ideaData\\Test2\\src\\imageTest\\man.png");
+    //    Mat dst = Highgui.imread("D:\\ideaData\\Test2\\src\\imageTest\\manBand1.jpg");
+    //    //MatOfRect mr = getFace(dst);
+    //    //Mat sub = dst.submat(mr.toArray()[0]);
+    //    //ImageComponent.showInFrame("i", mat2Img(src.t()));
+    //    //Highgui.imwrite("D:\\ideaData\\Test2\\src\\imageTest\\manTest1.jpg", FeatureSurfBruteforce(src.t(), dst));//sub
+    //    ImageComponent.showInFrame("iii", mat2Img(FeatureSurfBruteforce(src.t(), dst)));
+    //    //Highgui.imwrite("E:/work/qqq/Y5.jpg", FeatureSiftLannbased(src.t(), sub));
+    //    //Highgui.imwrite("E:/work/qqq/Y6.jpg", FeatureOrbLannbased(src.t(), sub));
+    //}
+
+    //public Test(){
+    //    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    //    this.src = Highgui.imread(src);
+    //    this.dst = Highgui.imread(dst);
+    //    //FeatureSurfBruteforce(this.src, this.dst);
+    //    //System.out.println(FeatureSurfBruteforce(srcM, dstM));
+    //    //ImageComponent.showInFrame("iii", mat2Img(FeatureSurfBruteforce(src.t(), dst)));
+    //}
+
+    public static boolean FeatureSurfBruteforce(String srcString, String dstString){//return Mat
+        //srcString = srcString.trim();
+        //File f2 = new File( dstString );
+        //File f = new File( srcString) ;
+        //System.out.println( "FILE EXISTS: " + f.exists( ) + "=>" + f2.exists());
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        Mat src = org.opencv.imgcodecs.Imgcodecs.imread("D:\\ideaData\\Test2\\src\\imageTest\\man.png");
-        Mat dst = org.opencv.imgcodecs.Imgcodecs.imread("D:\\ideaData\\Test2\\src\\imageTest\\manBand1.jpg");
-        MatOfRect mr = getFace(dst);
-        Mat sub = dst.submat(mr.toArray()[0]);
+        Mat src = Highgui.imread(srcString);
+        Mat dst = Highgui.imread(dstString);
+        //System.out.println("SRC STRING IN FEATURE_SURF_BRUTE_FORCE IS (" + srcString.charAt(0) + ")");
+        //System.out.println("DST STRING IN FEATURE_SURF_BRUTE_FORCE IS " + dstString);
 
-        org.opencv.imgcodecs.Imgcodecs.imwrite("D:\\ideaData\\Test2\\src\\imageTest\\manTest1.jpg", FeatureSurfBruteforce(src.t(), sub));
-        //Highgui.imwrite("E:/work/qqq/Y5.jpg", FeatureSiftLannbased(src.t(), sub));
-        //Highgui.imwrite("E:/work/qqq/Y6.jpg", FeatureOrbLannbased(src.t(), sub));
-    }
-
-
-    public static Mat FeatureSurfBruteforce(Mat src, Mat dst){
-        //FeatureDetector fd = FeatureDetector.create(FeatureDetector.SIFT);
-        //DescriptorExtractor de = DescriptorExtractor.create(DescriptorExtractor.SIFT);
-        ////DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.FLANNBASED);
-        //DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE_L1);
 
         FeatureDetector fd = FeatureDetector.create(FeatureDetector.SURF);
         DescriptorExtractor de = DescriptorExtractor.create(DescriptorExtractor.SURF);
-        //DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.FLANNBASED);
-        DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE_L1);
+        //FLANN的含义是Fast Library forApproximate Nearest Neighbors
+        DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.FLANNBASED);
+        //尝试所有可能的匹配，从而使得它总能够找到最佳匹配，这也是Brute Force（暴力法）
+        //DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE_L1);
+        //DescriptorMatcher Matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
 
         MatOfKeyPoint mkp = new MatOfKeyPoint();
         fd.detect(src, mkp);
@@ -84,26 +112,52 @@ public class Test {
                 goodMatch.add(mats[i]);
             }
         }
-
+        System.out.println("size:" + goodMatch.size());
+        System.out.println("percent:" + goodMatch.size()/(double)mats.length);
         Matches.fromList(goodMatch);
         // Show result
         Mat OutImage = new Mat();
         Features2d.drawMatches(src, mkp, dst, mkp2, Matches, OutImage);
 
-        return OutImage;
+        if((goodMatch.size()/(double)mats.length)>0.1){
+            return true;
+        }else{
+            return false;
+        }
+
+        //return OutImage;
     }
 
-    public static MatOfRect getFace(Mat src) {
-        Mat result = src.clone();
-        if (src.cols() > 1000 || src.rows() > 1000) {
-            Imgproc.resize(src, result, new Size(src.cols() / 3, src.rows() / 3));
-        }
-        //CascadeClassifier faceDetector = new CascadeClassifier(getClass().getResource("/haarcascade_frontalface_alt.xml").getPath());
-        //CascadeClassifier faceDetector = new CascadeClassifier(facePath);
-        CascadeClassifier faceDetector = new CascadeClassifier("D:\\software\\openCV-3.3.1\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_alt2.xml");//
-        MatOfRect objDetections = new MatOfRect();
-        faceDetector.detectMultiScale(result, objDetections);
+    //public static MatOfRect getFace(Mat src) {
+    //    Mat result = src.clone();
+    //    System.out.println("cols:"+src.cols()+",rows:"+src.rows());
+    //    if (src.cols() > 1000 || src.rows() > 1000) {
+    //        Imgproc.resize(src, result, new Size(src.cols() / 3, src.rows() / 3));
+    //    }
+    //    //CascadeClassifier faceDetector = new CascadeClassifier(getClass().getResource("/haarcascade_frontalface_alt.xml").getPath());
+    //    //CascadeClassifier faceDetector = new CascadeClassifier(facePath);
+    //    CascadeClassifier faceDetector = new CascadeClassifier("D:\\software\\openCV-3.3.1\\opencv\\sources\\data\\haarcascades\\haarcascade_frontalface_alt2.xml");//
+    //    MatOfRect objDetections = new MatOfRect();
+    //    faceDetector.detectMultiScale(result, objDetections);
+	//
+    //    return objDetections;
+    //}
 
-        return objDetections;
+    public static BufferedImage mat2Img(Mat in)
+    {
+        BufferedImage out;
+        byte[] data = new byte[in.cols() * in.rows() * (int)in.elemSize()];
+        int type;
+        in.get(0, 0, data);
+
+        if(in.channels() == 1)
+            type = BufferedImage.TYPE_BYTE_GRAY;
+        else
+            type = BufferedImage.TYPE_3BYTE_BGR;
+
+        out = new BufferedImage(in.cols(), in.rows(), type);
+
+        out.getRaster().setDataElements(0, 0, in.cols(), in.rows(), data);
+        return out;
     }
 }
