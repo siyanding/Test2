@@ -181,71 +181,71 @@ public class ExcelWrite {
 	}
 
 
-	public static void main(String[] args) {
-		Test test = new Test();
-        //判断文件是否存在
-        System.out.println(ExcelWrite.fileExist("D:/test2.xls"));
-        //创建文件
-        //String[] title = {"id","name","password"};
-		String[] title = {"img1","img1Up","img1Down","img1Left","img1Right","img1TopLeft","img1BottomRight","img1TopRight","img1BottomLeft",
-				"img2","img2Up","img2Down","img2Left","img2Right","img2TopLeft","img2BottomRight","img2TopRight","img2BottomLeft",
-				"img3","img3Up","img3Down","img3Left","img3Right","img3TopLeft","img3BottomRight","img3TopRight","img3BottomLeft",
-				"img4","img4Up","img4Down","img4Left","img4Right","img4TopLeft","img4BottomRight","img4TopRight","img4BottomLeft",
-				"img5","img5Up","img5Down","img5Left","img5Right","img5TopLeft","img5BottomRight","img5TopRight","img5BottomLeft",
-				"img6","img6Up","img6Down","img6Left","img6Right","img6TopLeft","img6BottomRight","img6TopRight","img6BottomLeft",
-				"img7","img7Up","img7Down","img7Left","img7Right","img7TopLeft","img7BottomRight","img7TopRight","img7BottomLeft",
-				"img8","img8Up","img8Down","img8Left","img8Right","img8TopLeft","img8BottomRight","img8TopRight","img8BottomLeft",
-				"img9","img9Up","img9Down","img9Left","img9Right","img9TopLeft","img9BottomRight","img9TopRight","img9BottomLeft",
-				"img10","img10Up","img10Down","img10Left","img10Right","img10TopLeft","img10BottomRight","img10TopRight","img10BottomLeft"};
-		try {
-			ExcelWrite.createExcel("D:/test2.xls","sheet1",title);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("exception:"+e);
-		}
-		List<Map> list=new ArrayList<>();
-		String[] imgDir = readMethod();
-		System.out.println("imgDir[].size:"+imgDir.length);
-
-		for(int i=0; i<90; i++){
-			Map<String,String> map=new HashMap<>();
-			for(int j=0; j<90; j++){
-				String matchResult = String.valueOf(test.FeatureSurfBruteforce(imgDir[i],imgDir[j]));
-				map.put(title[j], matchResult);
-			}
-			//System.out.println("woshimap:"+map);
-			list.add(map);
-			System.out.println("======================================i:"+i);
-			//map.clear();
-			//System.out.println(list.get(0));
-
-		}
-        //Map<String,String> map=new HashMap<String,String>();
-        //map.put("id", "111");
-        //map.put("name", "张三");
-        //map.put("password", "111");
-		//
-        //Map<String,String> map2=new HashMap<String,String>();
-        //map2.put("id", "222");
-        //map2.put("name", "李四");
-        //map2.put("password", "222");
-        //list.add(map);
-        //list.add(map2);
-		System.out.println(list.get(1));
-		try {
-			ExcelWrite.writeToExcel("D:/test2.xls","sheet1",list);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		//String sql="select aaa,bbb,ccc from dddd";
-        //String sqlForSplit = sql.substring(sql.toLowerCase().indexOf("select")+6,sql.toLowerCase().indexOf("from")).trim();
-        //String sqlRemoveFrom=sql.substring(sql.toLowerCase().indexOf("from")+5).trim();
-        //System.out.println(sqlRemoveFrom);
-        //String tableName=sqlRemoveFrom.indexOf(" ")==-1 ?  sqlRemoveFrom : sqlRemoveFrom.substring(0,sqlRemoveFrom.indexOf(" "));
-        //System.out.println(tableName);
-
-
-
-	}
+//	public static void main(String[] args) {
+//		Test test = new Test();
+//        //判断文件是否存在
+//        System.out.println(ExcelWrite.fileExist("D:/test2.xls"));
+//        //创建文件
+//        //String[] title = {"id","name","password"};
+//		String[] title = {"img1","img1Up","img1Down","img1Left","img1Right","img1TopLeft","img1BottomRight","img1TopRight","img1BottomLeft",
+//				"img2","img2Up","img2Down","img2Left","img2Right","img2TopLeft","img2BottomRight","img2TopRight","img2BottomLeft",
+//				"img3","img3Up","img3Down","img3Left","img3Right","img3TopLeft","img3BottomRight","img3TopRight","img3BottomLeft",
+//				"img4","img4Up","img4Down","img4Left","img4Right","img4TopLeft","img4BottomRight","img4TopRight","img4BottomLeft",
+//				"img5","img5Up","img5Down","img5Left","img5Right","img5TopLeft","img5BottomRight","img5TopRight","img5BottomLeft",
+//				"img6","img6Up","img6Down","img6Left","img6Right","img6TopLeft","img6BottomRight","img6TopRight","img6BottomLeft",
+//				"img7","img7Up","img7Down","img7Left","img7Right","img7TopLeft","img7BottomRight","img7TopRight","img7BottomLeft",
+//				"img8","img8Up","img8Down","img8Left","img8Right","img8TopLeft","img8BottomRight","img8TopRight","img8BottomLeft",
+//				"img9","img9Up","img9Down","img9Left","img9Right","img9TopLeft","img9BottomRight","img9TopRight","img9BottomLeft",
+//				"img10","img10Up","img10Down","img10Left","img10Right","img10TopLeft","img10BottomRight","img10TopRight","img10BottomLeft"};
+//		try {
+//			ExcelWrite.createExcel("D:/test2.xls","sheet1",title);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("exception:"+e);
+//		}
+//		List<Map> list=new ArrayList<>();
+//		String[] imgDir = readMethod();
+//		System.out.println("imgDir[].size:"+imgDir.length);
+//
+//		for(int i=0; i<90; i++){
+//			Map<String,String> map=new HashMap<>();
+//			for(int j=0; j<90; j++){
+//				String matchResult = String.valueOf(test.FeatureSurfBruteforce(imgDir[i],imgDir[j]));
+//				map.put(title[j], matchResult);
+//			}
+//			//System.out.println("woshimap:"+map);
+//			list.add(map);
+//			System.out.println("======================================i:"+i);
+//			//map.clear();
+//			//System.out.println(list.get(0));
+//
+//		}
+//        //Map<String,String> map=new HashMap<String,String>();
+//        //map.put("id", "111");
+//        //map.put("name", "张三");
+//        //map.put("password", "111");
+//		//
+//        //Map<String,String> map2=new HashMap<String,String>();
+//        //map2.put("id", "222");
+//        //map2.put("name", "李四");
+//        //map2.put("password", "222");
+//        //list.add(map);
+//        //list.add(map2);
+//		System.out.println(list.get(1));
+//		try {
+//			ExcelWrite.writeToExcel("D:/test2.xls","sheet1",list);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//		//String sql="select aaa,bbb,ccc from dddd";
+//        //String sqlForSplit = sql.substring(sql.toLowerCase().indexOf("select")+6,sql.toLowerCase().indexOf("from")).trim();
+//        //String sqlRemoveFrom=sql.substring(sql.toLowerCase().indexOf("from")+5).trim();
+//        //System.out.println(sqlRemoveFrom);
+//        //String tableName=sqlRemoveFrom.indexOf(" ")==-1 ?  sqlRemoveFrom : sqlRemoveFrom.substring(0,sqlRemoveFrom.indexOf(" "));
+//        //System.out.println(tableName);
+//
+//
+//
+//	}
 }
