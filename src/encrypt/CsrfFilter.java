@@ -2,7 +2,6 @@ package encrypt;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.*;
 
@@ -80,7 +79,6 @@ public class CsrfFilter implements Filter {
         System.out.println("Test Param: " + testParam);
 
     }
-
 
     public String generateCSRFToken(){
         String result;

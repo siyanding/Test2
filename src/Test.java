@@ -2,6 +2,8 @@ import org.opencv.core.*;
 import org.opencv.features2d.*;
 import org.opencv.highgui.Highgui;
 import java.io.File;
+
+import org.opencv.imgproc.Imgproc;
 import pixeljelly.gui.ImageComponent;
 
 import java.awt.image.BufferedImage;
@@ -10,46 +12,26 @@ import java.util.List;
 
 public class Test {
 
-    //Boolean use_mask = false;
-    //Mat img = new Mat(), templ = new Mat();
-    //Mat mask = new Mat();
+    public Mat getThansform(Mat drawable, Mat region, int[] points) {
+        Mat drawableCorner = new Mat(4, 1, CvType.CV_32FC2);
+        Mat drawableTransformCorner = new Mat(4, 1, CvType.CV_32FC2);
 
-    Mat src,dst;
+        drawableCorner.put(0, 0, new double[]{0.0, 0.0});
+        drawableCorner.put(1, 0, new double[]{drawable.cols(), 0.0});
+        drawableCorner.put(2, 0, new double[]{drawable.cols(), drawable.rows()});
+        drawableCorner.put(3, 0, new double[]{0.0, drawable.rows()});
 
-    //public static void main(String[] args) {
-    //    //Test test = new Test();
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Up.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Down.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Left.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10Right.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10TopLeft.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10BottomRight.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10TopRight.jpg");
-    //    //test.FeatureSurfBruteforce("D:\\ideaData\\Test2\\src\\imageTest\\img10.jpg","D:\\ideaData\\Test2\\src\\imageTest\\img10BottomLeft.jpg");
-	//
-    //}
+        drawableTransformCorner.put(0, 0, new double[]{points[0], points[1]});
+        drawableTransformCorner.put(1, 0, new double[]{points[2], points[3]});
+        drawableTransformCorner.put(2, 0, new double[]{points[4], points[5]});
+        drawableTransformCorner.put(3, 0, new double[]{points[6], points[7]});
 
-    //public static void main(String[] args) {
-    //    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-    //    Mat src = Highgui.imread("D:\\ideaData\\Test2\\src\\imageTest\\man.png");
-    //    Mat dst = Highgui.imread("D:\\ideaData\\Test2\\src\\imageTest\\manBand1.jpg");
-    //    //MatOfRect mr = getFace(dst);
-    //    //Mat sub = dst.submat(mr.toArray()[0]);
-    //    //ImageComponent.showInFrame("i", mat2Img(src.t()));
-    //    //Highgui.imwrite("D:\\ideaData\\Test2\\src\\imageTest\\manTest1.jpg", FeatureSurfBruteforce(src.t(), dst));//sub
-    //    ImageComponent.showInFrame("iii", mat2Img(FeatureSurfBruteforce(src.t(), dst)));
-    //    //Highgui.imwrite("E:/work/qqq/Y5.jpg", FeatureSiftLannbased(src.t(), sub));
-    //    //Highgui.imwrite("E:/work/qqq/Y6.jpg", FeatureOrbLannbased(src.t(), sub));
-    //}
+        Mat perspectiveTransform = Imgproc.getPerspectiveTransform(drawableCorner, drawableTransformCorner);
+        Imgproc.warpPerspective(drawable, region, perspectiveTransform, region.size(), Imgproc.INTER_LINEAR,
+                Imgproc.BORDER_TRANSPARENT, new Scalar(0, 0, 0, 0));
 
-    //public Test(){
-    //    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-    //    this.src = Highgui.imread(src);
-    //    this.dst = Highgui.imread(dst);
-    //    //FeatureSurfBruteforce(this.src, this.dst);
-    //    //System.out.println(FeatureSurfBruteforce(srcM, dstM));
-    //    //ImageComponent.showInFrame("iii", mat2Img(FeatureSurfBruteforce(src.t(), dst)));
-    //}
+        return region;
+    }
 
     public static boolean FeatureSurfBruteforce(String srcString, String dstString){//return Mat
         //srcString = srcString.trim();

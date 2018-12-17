@@ -15,25 +15,25 @@
         <url-pattern>/UploadServlet</url-pattern>
     </servlet-mapping>
 
-    <filter>
-        <filter-name>CsrfFilter</filter-name>
-        <filter-class>encrypt.CsrfFilter</filter-class>
+    <!--<filter>-->
+        <!--<filter-name>CsrfFilter</filter-name>-->
+        <!--<filter-class>encrypt.CsrfFilter</filter-class>-->
 
-        <init-param>
-            <param-name>test-param</param-name>
-            <param-value>Initialization Paramter</param-value>
-        </init-param>
-    </filter>
+        <!--<init-param>-->
+            <!--<param-name>test-param</param-name>-->
+            <!--<param-value>Initialization Paramter</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
 
-    <filter-mapping>
-        <filter-name>CsrfFilter</filter-name>
-        <url-pattern>/AddFriends.jsp</url-pattern>
-        <url-pattern>/SignOut.jsp</url-pattern>
-        <url-pattern>/EditProfile.jsp</url-pattern>
-        <url-pattern>/ViewGifts.jsp</url-pattern>
-        <url-pattern>/CreateGifts.jsp</url-pattern>
-        <url-pattern>/ViewFriends.jsp</url-pattern>
-    </filter-mapping>
+    <!--<filter-mapping>-->
+        <!--&lt;!&ndash;<filter-name>CsrfFilter</filter-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<url-pattern>/AddFriends.jsp</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;<url-pattern>/SignOut.jsp</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;<url-pattern>/EditProfile.jsp</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<url-pattern>/ViewGifts.jsp</url-pattern>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<url-pattern>/CreateGifts.jsp</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;<url-pattern>/ViewFriends.jsp</url-pattern>&ndash;&gt;-->
+    <!--</filter-mapping>-->
 
 
 

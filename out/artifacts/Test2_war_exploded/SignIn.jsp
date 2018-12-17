@@ -5,11 +5,11 @@
   Time: 11:21 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" import="java.util.*" import="java.sql.*" contentType="text/html;charset=utf-8"%>
-<%@ page import="javax.mail.Session" %>
+<%@ page language="java" import="java.util.*" import="java.sql.*" contentType="text/html;charset=utf-8" %>
+
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <html>
 <head>
@@ -23,9 +23,8 @@
 
     <meta charset="UTF-8">
     <title>SignIn</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
@@ -41,7 +40,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -53,7 +53,7 @@
 </nav>
 
 
-<form class="form-horizontal col-md-6 col-md-offset-3" style="padding-top: 10em" action="CheckSignIn.jsp" method="post" onsubmit="return isValid(this)">
+<form class="form-horizontal col-md-6 col-md-offset-3" style="padding-top: 10em">
     <div class="form-group">
         <label for="username" class="col-sm-2 control-label">Username</label>
         <div class="col-sm-10">
@@ -66,43 +66,55 @@
             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
-        </div>
-    </div>
+    <%--<div class="form-group">--%>
+        <%--<div class="col-sm-offset-2 col-sm-10">--%>
+            <%--<button type="submit" class="btn btn-default" id="btn" onclick="isValid()">Sign in</button>--%>
+        <%--</div>--%>
+    <%--</div>--%>
     <div class="col-sm-offset-4 col-sm-10">
         <div>Don't have an account?<u><a href="SignUp.jsp">Sign up</a></u></div>
     </div>
 </form>
+<div class="form-horizontal col-md-6 col-md-offset-3">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" id="btn" onclick="isValid()">Sign in</button>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container col-md-offset-5" style="padding-top: 50em">
+        <p class="text-muted">@Copyright</p>
+    </div>
+</footer>
 
-    <footer class="footer" >
-        <div class="container col-md-offset-5" style="padding-top: 50em">
-            <p class="text-muted">@Copyright</p>
-        </div>
-    </footer>
 <script language="javascript">
-    var Bmob = require('Bmob-x.x.x.min.js');
-    Bmob.initialize("b2ab2a965d7a4ea905eeba56d4a2fa4d", "68f8f8b68a20fc68f92fd378b3aa6ddd");
-    function isValid(form)
-    {
+    function isValid() {
 
-        if (form.username.value=="")
-        {
+        if ($("#username").val() == "") {
             alert("Username can not be null");
             return false;
         }
-        if (form.pwd.value=="")
-        {
+        if ($("#password").val() == "") {
             alert("Password can not be null！");
             return false;
         }
-        Bmob.User.login('username','password').then(res => {
-            console.log(res)
-        }).catch(err => {
-            console.log(err)
+
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+            },
+            data:{username:$("#username").val(), password:$("#password").val()},
+            url: "https://api2.bmob.cn/1/login",
+            success: function(msg) {
+                // session.setAttribute("username",msg.username);
+                // $.cookie("username",msg.username);
+
+                window.location.href="ViewGifts.jsp?username=" + msg.username +"&sessionToken=" + msg.sessionToken + "&objectId=" + msg.objectId;
+                console.log(msg);
+                console.log(msg.username);
+            }
         });
-        return false;
     }
 </script>
 

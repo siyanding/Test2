@@ -18,8 +18,8 @@
     session.setAttribute("csrftoken",null);
     session.invalidate();
 %>
-<%response.sendRedirect("Index.jsp"); %>
 
+<%response.sendRedirect("Index.jsp"); %>
 
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>

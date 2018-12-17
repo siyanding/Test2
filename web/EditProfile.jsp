@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 10/13/2017
-  Time: 12:55 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -36,13 +30,82 @@
 <%!
     String token = "";
 %>
-<%
+<%String name= request.getParameter("username");
+   String sessionToken = request.getParameter("sessionToken");
+   System.out.println("sessionToken:" + sessionToken);
+   String userObjectId = request.getParameter("userObjectId");
+    System.out.println("objectId:" + userObjectId);
+%>
 
+<script language="javascript">
+    window.onload=function(){
+        getUser();
+    }
+    function getUser() {
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+            },
+            url: "https://api2.bmob.cn/1/users/<%=userObjectId%>",
+            success: function(msg) {
+                console.log("json" + msg.username);
+                document.getElementById("inputUsername3").value=msg.username;
+                document.getElementById("inputPassword3").value=msg.password;
+                document.getElementById("inputRepeatPassword3").value=msg.password;
+                document.getElementById("inputEmail3").value=msg.email;
+                var portrait = document.getElementById("inputPortrait3");
+                var imgSrc = portrait.setAttribute("src", msg.portrait);
+                console.log(msg);
+                console.log("success");
+            }
+        });
+    }
+    function updateProfile() {
+        if ($("#inputUsername3").val() == ""){
+            alert("Username can not be null!");
+        }
+        if ($("#inputPassword3").val() != $("#inputRepeatPassword3").val()){
+            alert("The two password don't match！");
+        }
+        if ($("#inputRepeatPassword3").val() == ""){
+            alert("Repeat password can not be null！");
+        }
+        if ($("#inputEmail3").val() == ""){
+            alert("Email can not be null！");
+        }
+        var da = {
+            username: document.getElementById("inputUsername3").value,
+            password: document.getElementById("inputPassword3").value,
+            email: document.getElementById("inputEmail3").value,};
+        $.ajax({
+            type: "PUT",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+                request.setRequestHeader("X-Bmob-Session-Token", "<%=sessionToken%>");
+            },
+            url: "https://api2.bmob.cn/1/users/<%=userObjectId%>",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(da),
+            dataType: "json",
+            success: function(msg) {
+                alert("Profile has been updated！");
+                console.log(msg);
+                console.log(<%=name%>);
+            }
+        });
+    }
+
+</script>
+<%
     token = (String) session.getAttribute("csrftoken");
     System.out.println("ViewGifts:" + token);
     System.out.println("ViewGiftsToken:" + (String)request.getParameter("csrftoken"));
 %>
-<% String name=(String)session.getAttribute("username");
+<%
     if(name!=null){
 %>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -58,7 +121,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
+                <li class="dropdown active">
 
                     <a id="drop0" href="ViewGifts.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         MyAccount
@@ -68,18 +131,24 @@
                         <li>
                             <form action="EditProfile.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Edit Profile" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="SignOut.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Sign Out" class="text-button" >
                             </form>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a id="drop1" href="ViewAccount.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Gifts
                         <span class="caret"></span>
@@ -88,13 +157,10 @@
                         <li>
                             <form action="ViewGifts.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Gifts" class="text-button" >
-                            </form>
-                        </li>
-                        <li>
-                            <form action="CreateGifts.jsp" method="post">
-                                <input type="hidden" name="csrftoken" value="<%=token%>">
-                                <input type="submit" value="Create Gifts" class="text-button" >
                             </form>
                         </li>
                     </ul>
@@ -109,19 +175,25 @@
                         <li>
                             <form action="ViewFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Friends" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="AddFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Add Friends" class="text-button" >
                             </form>
                         </li>
                     </ul>
                 </li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
@@ -130,7 +202,7 @@
         <label for="inputEmail3" class="col-sm-2 control-label">Edit Profile</label>
     </div>
     <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">username</label>
+        <label for="inputUsername3" class="col-sm-2 control-label">username</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="inputUsername3" placeholder="Username">
         </div>
@@ -148,28 +220,16 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Repeat Password</label>
+        <label for="inputRepeatPassword3" class="col-sm-2 control-label">Repeat Password</label>
         <div class="col-sm-10">
             <input type="password" class="form-control" id="inputRepeatPassword3" placeholder="Password">
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Portrait:</label>
-        <div class="col-sm-10">
-            <img  src="img/portrait1.jpg" alt="portrait" >
-        </div>
-    </div>
-
-    <ul class="list-inline col-md-offset-5">
-        <li><div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Save</button>
-        </div></li>
-    </ul>
-
-
-
 </form>
+
+<div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-default" onclick="updateProfile()">Save</button>
+</div>
 
 <footer class="footer" style="padding-top: 50em">
     <div class="container col-md-offset-5" >

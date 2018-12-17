@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="java.sql.*" import="encrypt.com.BCrypt" import="java.util.UUID" contentType="text/html;charset=utf-8"%>
-<%@ page import="DBUtil.Gifts" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <html>
@@ -38,10 +37,12 @@
 </head>
 <body>
 
+
 <%!
     String token = "";
     String name="";
-    List<Gifts> res;
+    String sessionToken= "";
+    String userObjectId="";
 %>
 <%
     String path = request.getContextPath();
@@ -49,55 +50,79 @@
     request.setAttribute("basePath", basePath);
 %>
 <%
-    name = (String)session.getAttribute("username");
+    name = request.getParameter("username");//(String)session.getAttribute("username");
+    sessionToken = request.getParameter("sessionToken");
+    userObjectId = request.getParameter("objectId");
     token = (String) session.getAttribute("csrftoken");
     System.out.println("ViewGifts:" + token);
     System.out.println("ViewGiftsToken:" + (String)request.getParameter("csrftoken"));
 %>
 
+<script language="javascript">
 
-
-<%
-    request.setCharacterEncoding("utf-8");
-    PreparedStatement sql = null;
-    ResultSet rs = null;
-    Connection conn = null;
-%>
-
-<%
-    String driver = "com.mysql.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/gift";
-    String use = "root";
-    String password = "123456";
-    Class.forName(driver);
-    conn= DriverManager.getConnection(url,use,password);
-    sql =conn.prepareStatement("select * from gifts where user=?");
-    sql.setString(1,name);
-    rs=sql.executeQuery();
-%>
-
-<%
-    res = new ArrayList<Gifts>();
-    while (rs.next()) {
-        // Retrieve by column name
-        Gifts g = new Gifts();
-        g.setId(rs.getInt("id"));
-        g.setBackground(rs.getString("background"));
-        g.setUser(rs.getString("user"));
-        g.setAttachment(rs.getString("attachment"));
-        g.setCoordinate(rs.getString("coordinate"));
-        g.setComment(rs.getString("comment"));
-        res.add(g);
+    window.onload=function(){
+        getGifts();
     }
-    rs.close();
-    sql.close();
-    conn.close();
-%>
+    function getGifts() {
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            url: "https://api2.bmob.cn/1/classes/Gift?where={\"recipient\":\"<%=name%>\"}",
+            success: function(msg) {
+                console.log(msg);
 
+                for(var i=0; i<msg.results.length; i++){
+                    var checked = msg.results[i].status ? "checked" : "";
+                    var src = msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
+                    var gift = msg.results[i].status ? msg.results[i].attach : "img/p2.jpg";
+                    var row = '<tr><td><img src= '+ src +' alt="img/p1.jpg" width="50" height="50"></td>' +
+                        '<td><img src= '+ gift + ' alt="img/p2.jpg" width="50" height="50"></td>'+
+                        '<td id="username">' + msg.results[i].user + '</td>' +
+                        '<td>'+msg.results[i].createdAt+'</td><td>' +
+                        '<input type="checkbox" '+checked +' id="checkBox" disabled></td></tr>';
+                    $("#table tbody").append(row);
+                }
+            }
+        });
+    }
 
-
-
-
+    function searchGifts() {
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            url: "https://api2.bmob.cn/1/classes/Gift?where={\"recipient\":\"<%=name%>\"}",
+            success: function(msg) {
+                console.log(msg);
+                console.log("search success!");
+                $("#table  tr:not(:first)").empty("");
+                console.log("empty success!");
+                for(var i=0; i<msg.results.length; i++){
+                    if (msg.results[i].user.includes($("#search").val())) {
+                        console.log("find a row");
+                        var checked = msg.results[i].status ? "checked" : "";
+                        var src = msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
+                        var gift = msg.results[i].status ? msg.results[i].attach : "img/p2.jpg";
+                        var row = '<tr><td><img src= '+ src +' alt="img/p1.jpg" width="50" height="50"></td>' +
+                            '<td><img src= "img/p2.jpg" alt="img/p2.jpg" width="50" height="50"></td>'+
+                            '<td id="username">' +msg.results[i].user+'</td>' +
+                            '<td>'+msg.results[i].createdAt+'</td>' +
+                            '<td><input type="checkbox" '+checked +'  id="checkBox" disabled></td></tr>';
+                        $("#table tbody").append(row);
+                    }
+                }
+                console.log(""+<%=name%>);
+            }
+        });
+    }
+</script>
 
 <%
     if(name!=null){%>
@@ -124,12 +149,18 @@
                         <li>
                             <form action="EditProfile.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Edit Profile" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="SignOut.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Sign Out" class="text-button" >
                             </form>
                         </li>
@@ -144,13 +175,10 @@
                         <li>
                             <form action="ViewGifts.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Gifts" class="text-button" >
-                            </form>
-                        </li>
-                        <li>
-                            <form action="CreateGifts.jsp" method="post">
-                                <input type="hidden" name="csrftoken" value="<%=token%>">
-                                <input type="submit" value="Create Gifts" class="text-button" >
                             </form>
                         </li>
                     </ul>
@@ -165,84 +193,51 @@
                         <li>
                             <form action="ViewFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Friends" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="AddFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Add Friends" class="text-button" >
                             </form>
                         </li>
                     </ul>
                 </li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
 <div style="padding-top: 7em">
     <div class="col-lg-6 col-md-offset-2">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="Search for..." id="search">
             <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" type="button" onclick="searchGifts()">Go!</button>
       </span>
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
-
 </div>
 
 <div class="container" style="padding-top: 5em">
-    <table class="table table-striped">
+    <table class="table table-striped" id="table">
         <tr>
-            <th>Picture</th>
-            <th>Name</th>
-            <th></th>
-            <th></th>
+            <th>Region</th>
+            <th>Gift</th>
+            <th>Sent By</th>
+            <th>Received At</th>
+            <th>Found</th>
         </tr>
-        <%
-            for (int i=0;i<res.size();i++){
-        %>
-        <tr>
-            <td><img src= "${basePath}/img/<%=res.get(i).getBackground()%>" alt="gift" width="50" height="50"></td>
-            <td><%=res.get(i).getComment()%></td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Edit</button>
-                </div>
-            </td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Delete</button>
-                </div>
-            </td>
-        </tr>
-        <%
-            }
-
-        %>
     </table>
 
 </div>
-
-<nav aria-label="Page navigation" class="col-md-offset-5">
-    <ul class="pagination col-md-offset-6">
-        <li>
-            <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-
-        <li>
-            <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
-    </ul>
-</nav>
 
 <footer class="footer">
     <div class="container col-md-offset-5" >

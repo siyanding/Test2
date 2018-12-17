@@ -32,18 +32,140 @@
     </style>
 </head>
 <body>
+<%String name= request.getParameter("username");
+    String sessionToken = request.getParameter("sessionToken");
+    String userObjectId = request.getParameter("userObjectId");%>
+<script language="javascript">
+
+    window.onload=function(){
+        getFriends();
+    }
+    function getFriends() {
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            url: "https://api2.bmob.cn/1/classes/Friend?where={\"user\":\"<%=name%>\"}",
+
+            success: function(msg) {
+                console.log(msg);
+                $.ajax({
+                    type: "GET",
+                    beforeSend: function(request) {
+                        request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                        request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                        request.setRequestHeader("Content-Type", "application/json");
+                    },
+                    url: "https://api2.bmob.cn/1/users",
+                    success: function(data) {
+                        var tag = false;
+                        console.log(data);
+                        for(var i=0; i<data.results.length; i++){
+                            for (var j=0; j<msg.results.length; j++) {
+                                if(data.results[i].username == msg.results[j].user){
+                                    tag = true;
+                                }
+                            }
+                            if(!tag){
+                                //msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
+                                var portrait = data.results[i].portrait == "" ? "img/p2.jpg" : data.results[i].portrait;
+                                console.log(portrait);
+                                var row = '<tr><td><img src='+ portrait +' alt="img/p1.jpg" width="50" height="50"></td>' +//<img src= ' + portrait +' alt="img/p1.jpg" width="50" height="50">
+                                    '<td id="username">'+ data.results[i].username + '</td>' +
+                                    '<td><div class="btn-group" role="group" aria-label=""><button type="button" class="btn btn-default" onclick="addFriend()" id="addFriend">Add Friend</button></div></td></tr>';
+                                $("#table tbody").append(row);
+                            }
+                            tag = false;
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    function addFriend(){
+        console.log("click, click");
+        var da = {
+            user:<%=name%>,
+            friend:document.getElementById('username').innerText.trim()
+        };
+        $.ajax({
+            type: "POST",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(da),
+            dataType: "json",
+            url: "https://api2.bmob.cn/1/classes/Friend",
+            success: function(msg) {
+                console.log(msg);
+                console.log(msg.username);
+            }
+        });
+    }
+
+    function searchFriends() {
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            url: "https://api2.bmob.cn/1/classes/Friend?where={\"user\":\"<%=name%>\"}",
+
+            success: function(msg) {
+                console.log(msg);
+                $.ajax({
+                    type: "GET",
+                    beforeSend: function(request) {
+                        request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                        request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                        request.setRequestHeader("Content-Type", "application/json");
+                    },
+                    url: "https://api2.bmob.cn/1/users",
+                    success: function(data) {
+                        var tag = false;
+                        console.log(data);
+                        $("#table  tr:not(:first)").empty("");
+                        console.log("empty success!");
+                        for(var i=0; i<data.results.length; i++){
+                            for (var j=0; j<msg.results.length; j++) {
+                                if(data.results[i].username == msg.results[j].user){
+                                    tag = true;
+                                }
+                            }
+                            if(!tag && data.results[i].username.includes($("#search").val())){
+                                var portrait = data.results[i].portrait == "" ? "img/p1.jpg" : data.results[i].portrait;
+                                var row = '<tr><td><img src= ' + portrait +' alt="img/p1.jpg" width="50" height="50"></td>' +
+                                    '<td id="username">'+ data.results[i].username + '</td>' +
+                                    '<td><div class="btn-group" role="group" aria-label=""><button type="button" class="btn btn-default" onclick="addFriend()" id="addFriend">Add Friend</button></div></td></tr>';
+                                $("#table tbody").append(row);
+                            }
+                            tag = false;
+                        }
+                    }
+                });
+            }
+        });
+    }
+</script>
 <%!
     String token = "";
 %>
 <%
-
     token = (String) session.getAttribute("csrftoken");
     System.out.println("AddFriends:" + token);
     System.out.println("AddFriendsToken:" + (String)request.getParameter("csrftoken"));
 %>
-<%
-    String name=(String)session.getAttribute("username");
-    if(name != null){%>
+
+<%    if(name != null){%>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -67,18 +189,24 @@
                         <li>
                             <form action="EditProfile.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Edit Profile" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="SignOut.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Sign Out" class="text-button" >
                             </form>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a id="drop1" href="ViewAccount.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Gifts
                         <span class="caret"></span>
@@ -87,19 +215,16 @@
                         <li>
                             <form action="ViewGifts.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Gifts" class="text-button" >
-                            </form>
-                        </li>
-                        <li>
-                            <form action="CreateGifts.jsp" method="post">
-                                <input type="hidden" name="csrftoken" value="<%=token%>">
-                                <input type="submit" value="Create Gifts" class="text-button" >
                             </form>
                         </li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a id="drop2" href="ViewAccount.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Friends
                         <span class="caret"></span>
@@ -108,12 +233,18 @@
                         <li>
                             <form action="ViewFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="View Friends" class="text-button" >
                             </form>
                         </li>
                         <li>
                             <form action="AddFriends.jsp" method="post">
                                 <input type="hidden" name="csrftoken" value="<%=token%>">
+                                <input type="hidden" name="username" value="<%=name%>">
+                                <input type="hidden" name="sessionToken" value="<%=sessionToken%>">
+                                <input type="hidden" name="userObjectId" value="<%=userObjectId%>">
                                 <input type="submit" value="Add Friends" class="text-button" >
                             </form>
                         </li>
@@ -127,9 +258,9 @@
 <div style="padding-top: 7em">
     <div class="col-lg-6 col-md-offset-2">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="Search for..." id="search">
             <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" type="button" onclick="searchFriends()">Go!</button>
       </span>
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
@@ -137,69 +268,14 @@
 </div>
 
 <div class="container" style="padding-top: 5em">
-    <table class="table table-striped" style="width: 1100px">
+    <table class="table table-striped" style="width: 1100px" id="table">
         <tr>
             <th>Portrait</th>
             <th>Username</th>
             <th></th>
         </tr>
-        <tr>
-            <td><img src="img/p1.jpg" alt="p1"></td>
-            <td>test1</td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Add Friend</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="img/p2.jpg" alt="p2"></td>
-            <td>test2</td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Add Friend</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="img/p3.png" alt="p3"></td>
-            <td>test3</td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Add Friend</button>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="img/p4.png" alt="p4"></td>
-            <td>test4</td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default">Add Friend</button>
-                </div>
-            </td>
-        </tr>
     </table>
-
 </div>
-
-<nav aria-label="Page navigation" class="col-md-offset-5">
-    <ul class="pagination col-md-offset-6">
-        <li>
-            <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-
-        <li>
-            <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
-    </ul>
-</nav>
 
 <footer class="footer" >
     <div class="container col-md-offset-5" >

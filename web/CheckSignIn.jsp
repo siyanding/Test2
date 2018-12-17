@@ -39,7 +39,6 @@
     System.out.println("CheckSignInToken:" + (String)request.getParameter("csrftoken"));
 %>
 
-
 <%
     //BCrypt.checkpw(candidate, hashed)
     request.setCharacterEncoding("utf-8");

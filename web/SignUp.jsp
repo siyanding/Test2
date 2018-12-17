@@ -26,28 +26,54 @@
     <meta http-equiv="expires" content="0">
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
-    <!--
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    -->
+
     <script language="javascript">
-        function isValid(form)
+        function isValid()
         {
-            if (form.username.value=="")
+            if ($("#username").val() == "")
             {
                 alert("Username can not be null");
                 return false;
             }
-            if (form.pwd.value!=form.pwd2.value)
+            if ($("#inputPassword").val() != $("#inputRepeatPassword").val())
             {
                 alert("The two password don't match！");
                 return false;
             }
-            else  if (form.pwd.value=="")
+            if ($("#inputRepeatPassword").val() == "")
             {
-                alert("Password can not be null！");
+                alert("Repeat password can not be null！");
                 return false;
             }
-            else return true;
+            if ($("#inputEmail").val() == "")
+            {
+                alert("Email can not be null！");
+                return false;
+            }
+            var da = {
+                username:$("#username").val(),
+                password:$("#inputPassword").val(),
+                email: $("#inputEmail").val()};
+            $.ajax({
+                type: "POST",
+                beforeSend: function(request) {
+                    request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                    request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                    request.setRequestHeader("Content-Type", "application/json");
+                },
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(da),
+                dataType: "json",
+                url: "https://api2.bmob.cn/1/users",
+                success: function(msg) {
+                    window.location.href="ViewGifts.jsp?username=" + msg.username;
+                    console.log(msg);
+                    console.log(msg.username);
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+
+                }
+            });
         }
     </script>
 </head>
@@ -68,14 +94,14 @@
         </div>
     </nav>
 
-    <form class="form-horizontal container col-md-6 col-md-offset-3" style="padding-top: 10em" action="CheckSignUp.jsp" method="post" onSubmit="return isValid(this);">
+    <form class="form-horizontal container col-md-6 col-md-offset-3" style="padding-top: 10em">
         <div class="form-group">
             <label class="col-sm-2 control-label">Sign up</label>
         </div>
         <div class="form-group">
             <label for="Username" class="col-sm-2 control-label" >username</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Username" placeholder="Username" name="username">
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
             </div>
         </div>
         <div class="form-group">
@@ -96,25 +122,18 @@
                 <input type="password" class="form-control" id="inputRepeatPassword" placeholder="Repeat Password" name="pwd2">
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Portrait:</label>
-            <div class="col-sm-10">
-                <img  src="img/portrait1.jpg" alt="portrait" >
-            </div>
-        </div>
 
-
-        <ul class="list-inline col-md-offset-5">
-            <li><div class="col-sm-offset-2 col-sm-10">
-                <input type="submit" class="btn btn-default" value="Sign Up"/>
-            </div></li>
-        </ul>
         <div class="col-sm-offset-4 col-sm-10">
             <div>Already have an account?<u><a href="SignIn.jsp">Sign in</a></u></div>
         </div>
 
 
     </form>
+    <div class="form-horizontal col-md-6 col-md-offset-3">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" id="btn" onclick="isValid()">Sign up</button>
+        </div>
+    </div>
 
     <footer class="footer" >
         <div class="container col-md-offset-5" style="padding-top: 60em">
