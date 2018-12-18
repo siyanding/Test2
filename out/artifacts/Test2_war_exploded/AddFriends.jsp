@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 10/13/2017
-  Time: 1:11 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -65,17 +59,18 @@
                         console.log(data);
                         for(var i=0; i<data.results.length; i++){
                             for (var j=0; j<msg.results.length; j++) {
-                                if(data.results[i].username == msg.results[j].user){
+                                if(data.results[i].username == msg.results[j].friend){
                                     tag = true;
                                 }
                             }
-                            if(!tag){
+                            if(!tag && data.results[i].username != '<%=name%>'){
                                 //msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
-                                var portrait = data.results[i].portrait == "" ? "img/p2.jpg" : data.results[i].portrait;
+                                var portrait = data.results[i].portrait == null ? "img/p2.jpg" : data.results[i].portrait;
+                                var temp = String(data.results[i].username);
                                 console.log(portrait);
-                                var row = '<tr><td><img src='+ portrait +' alt="img/p1.jpg" width="50" height="50"></td>' +//<img src= ' + portrait +' alt="img/p1.jpg" width="50" height="50">
-                                    '<td id="username">'+ data.results[i].username + '</td>' +
-                                    '<td><div class="btn-group" role="group" aria-label=""><button type="button" class="btn btn-default" onclick="addFriend()" id="addFriend">Add Friend</button></div></td></tr>';
+                                var row = '<tr><td><img src='+ portrait +' alt="../img/p1.jpg" width="50" height="50"></td>' +//<img src= ' + portrait +' alt="img/p1.jpg" width="50" height="50">
+                                    '<td id=' + data.results[i].objectId +'>' +  data.results[i].username + '</td>' +
+                                    '<td><div class="btn-group" role="group" aria-label=""><button type="button" class="btn btn-default" onclick="addFriend(this)" id="'+ temp + '">Add Friend</button></div></td></tr>';
                                 $("#table tbody").append(row);
                             }
                             tag = false;
@@ -86,11 +81,15 @@
         });
     }
 
-    function addFriend(){
+    function addFriend(things){
+        console.log(things.id)
         console.log("click, click");
+        var username = "";
+        username = '<%=name%>';
+        console.log(username);
         var da = {
-            user:<%=name%>,
-            friend:document.getElementById('username').innerText.trim()
+            user:""+ username,
+            friend:things.id
         };
         $.ajax({
             type: "POST",
@@ -104,8 +103,9 @@
             dataType: "json",
             url: "https://api2.bmob.cn/1/classes/Friend",
             success: function(msg) {
-                console.log(msg);
-                console.log(msg.username);
+                alert("add success");
+                location.reload();
+                console.log(things.id + "is your friend now");
             }
         });
     }

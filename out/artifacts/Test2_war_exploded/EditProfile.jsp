@@ -55,8 +55,6 @@
                 document.getElementById("inputPassword3").value=msg.password;
                 document.getElementById("inputRepeatPassword3").value=msg.password;
                 document.getElementById("inputEmail3").value=msg.email;
-                var portrait = document.getElementById("inputPortrait3");
-                var imgSrc = portrait.setAttribute("src", msg.portrait);
                 console.log(msg);
                 console.log("success");
             }

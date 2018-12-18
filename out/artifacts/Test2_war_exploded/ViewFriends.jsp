@@ -51,21 +51,39 @@
             },
             url: "https://api2.bmob.cn/1/classes/Friend?where={\"user\":\"<%=name%>\"}",
             success: function(msg) {
+                $.ajax({
+                    type: "GET",
+                    beforeSend: function(request) {
+                        request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                        request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                        request.setRequestHeader("Content-Type", "application/json");
+                    },
+                    url: "https://api2.bmob.cn/1/users",
+                    success: function(data) {
+                        console.log(data);
+                        for(var i=0; i<data.results.length; i++){
+                            for (var j=0; j<msg.results.length; j++) {
+                                if(data.results[i].username == msg.results[j].friend){
+                                    var portrait = data.results[i].portrait == null ? "img/p2.jpg" : data.results[i].portrait;
+
+                                    var temp = msg.results[j].friend;
+                                    console.log(portrait);
+                                    var row = '<tr><td><img src='+ portrait +' alt="../img/p1.jpg" width="50" height="50"></td>' +
+                                        '<td id=' + data.results[i].objectId +'>' +  data.results[i].username + '</td>' +
+                                        '<td><div class="btn-group" role="group" aria-label=""><button type="button" class="btn btn-default" onclick="deleteFriend(this)" id="'+ temp +'">Delete</button></div></td></tr>';
+                                    $("#table tbody").append(row);
+                                }
+                            }
+                        }
+                    }
+                });
                 console.log(msg);
-                for(var i=0; i<msg.results.length; i++){
-                    // var checked = msg.results[i].status ? "" : "checked";
-                    var row = '<tr><td><img src="img/p4.png" alt="p4"></td>' +
-                        '<td id="username">'+ msg.results[i].friend + '</td>' +
-                        '<td><div class="btn-group" role="group" aria-label="...">' +
-                        '<button type="button" class="btn btn-default" onclick="deleteFriend()" id="delete">Delete</button></div></td></tr>';
-                    $("#table tbody").append(row);
-                }
-                console.log(<%=name%>);
             }
         });
     }
 
-    function deleteFriend( ){
+    function deleteFriend(data){
+        var friend = data.id;
         $.ajax({
             type: "GET",
             beforeSend: function(request) {
@@ -75,8 +93,10 @@
             },
             url: "https://api2.bmob.cn/1/classes/Friend?where={\"user\":\"<%=name%>\"}",
             success: function(msg) {
+                console.log(msg);
                 for(var i=0; i<msg.results.length; i++){
-                  if (msg.results[i].friend.trim() == document.getElementById('username').innerText.trim()) {
+                  if (msg.results[i].friend.trim() == friend) {
+                      console.log(msg.results[i].objectId);
                       $.ajax({
                           type: "DELETE",
                           beforeSend: function(request) {
@@ -84,9 +104,11 @@
                               request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
                               request.setRequestHeader("Content-Type", "application/json");
                           },
-                          url: "https://api2.bmob.cn/1/classes/Friend/" + JSON.stringify(msg.results[i].getObjectId),
+                          url: "https://api2.bmob.cn/1/classes/Friend/" + msg.results[i].objectId,
                           success: function(msg) {
-                              console.log(msg);
+                              alert("delete success");
+                              location.reload();
+
                           }
                       });
                   }
@@ -109,16 +131,31 @@
                 console.log("search success!");
                 $("#table  tr:not(:first)").empty("");
                 console.log("empty success!");
-                for(var i=0; i<msg.results.length; i++){
-                    if (msg.results[i].friend.includes($("#search").val())) {
-                        console.log("find a row");
-                        var row = '<tr><td><img src="img/p4.png" alt="p4"></td>' +
-                            '<td id="username">'+ msg.results[i].friend + '</td>' +
-                            '<td><div class="btn-group" role="group" aria-label="...">' +
-                            '<button type="button" class="btn btn-default" onclick="deleteFriend()" id="delete">Delete</button></div></td></tr>';
-                        $("#table tbody").append(row);
+                $.ajax({
+                    type: "GET",
+                    beforeSend: function(request) {
+                        request.setRequestHeader("X-Bmob-Application-Id", "b2ab2a965d7a4ea905eeba56d4a2fa4d");
+                        request.setRequestHeader("X-Bmob-REST-API-Key", "68f8f8b68a20fc68f92fd378b3aa6ddd");
+                        request.setRequestHeader("Content-Type", "application/json");
+                    },
+                    url: "https://api2.bmob.cn/1/users",
+                    success: function(data) {
+                        console.log(data);
+                        for(var i=0; i<msg.results.length; i++){
+                            for (var j=0; j<data.results.length; j++) {
+                                if (msg.results[i].friend.includes($("#search").val()) && data.results[j].username == msg.results[i].friend) {
+                                    console.log("find a row");
+                                    var portrait = data.results[i].portrait == null ? "img/p2.jpg" : data.results[i].portrait;
+                                    var row = '<tr><td><img src="'+ portrait +'" alt="img/p2.jpg" width="50" height="50"></td>' +
+                                        '<td id="username">'+ msg.results[i].friend + '</td>' +
+                                        '<td><div class="btn-group" role="group" aria-label="...">' +
+                                        '<button type="button" class="btn btn-default" onclick="deleteFriend()" id="delete">Delete</button></div></td></tr>';
+                                    $("#table tbody").append(row);
+                                }
+                            }
+                        }
                     }
-                }
+                });
             }
         });
     }

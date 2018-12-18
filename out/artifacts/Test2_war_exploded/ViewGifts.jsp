@@ -77,10 +77,9 @@
 
                 for(var i=0; i<msg.results.length; i++){
                     var checked = msg.results[i].status ? "checked" : "";
-                    var src = msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
-                    var gift = msg.results[i].status ? msg.results[i].attach : "img/p2.jpg";
-                    var row = '<tr><td><img src= '+ src +' alt="img/p1.jpg" width="50" height="50"></td>' +
-                        '<td><img src= '+ gift + ' alt="img/p2.jpg" width="50" height="50"></td>'+
+                    var src = msg.results[i].status ? msg.results[i].background : "img/p4.png";
+                    var gift = msg.results[i].status ? msg.results[i].whole : "img/p4.png";
+                    var row = '<tr><td><img src= '+ gift + ' alt="img/p4.png" width="50" height="50"></td>'+
                         '<td id="username">' + msg.results[i].user + '</td>' +
                         '<td>'+msg.results[i].createdAt+'</td><td>' +
                         '<input type="checkbox" '+checked +' id="checkBox" disabled></td></tr>';
@@ -108,10 +107,8 @@
                     if (msg.results[i].user.includes($("#search").val())) {
                         console.log("find a row");
                         var checked = msg.results[i].status ? "checked" : "";
-                        var src = msg.results[i].status ? msg.results[i].background : "img/p1.jpg";
-                        var gift = msg.results[i].status ? msg.results[i].attach : "img/p2.jpg";
-                        var row = '<tr><td><img src= '+ src +' alt="img/p1.jpg" width="50" height="50"></td>' +
-                            '<td><img src= "img/p2.jpg" alt="img/p2.jpg" width="50" height="50"></td>'+
+                        var gift = msg.results[i].status ? msg.results[i].whole : "img/p4.png";
+                        var row = '<tr><td><img src= '+ gift +' alt="img/p4.png" width="50" height="50"></td>'+
                             '<td id="username">' +msg.results[i].user+'</td>' +
                             '<td>'+msg.results[i].createdAt+'</td>' +
                             '<td><input type="checkbox" '+checked +'  id="checkBox" disabled></td></tr>';
@@ -229,7 +226,6 @@
 <div class="container" style="padding-top: 5em">
     <table class="table table-striped" id="table">
         <tr>
-            <th>Region</th>
             <th>Gift</th>
             <th>Sent By</th>
             <th>Received At</th>

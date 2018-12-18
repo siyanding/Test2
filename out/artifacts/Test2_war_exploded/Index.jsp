@@ -49,8 +49,7 @@
   </nav>
 
   <div class="col-md-offset-3" style="padding-top: 10em">
-    <img src="img/giftbox.gif" alt="giftbox">
-
+    <img src="img/giftbox.gif" alt="img/giftbox.gif" id="giftbox">
   </div>
 
   <footer class="footer" style="padding-top: 10em">

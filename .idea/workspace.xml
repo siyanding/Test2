@@ -7,392 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e860c1-2693-4141-82eb-4f6ec12baf64" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/AddFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/AddFriends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/CheckSignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/CheckSignIn.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/EditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/EditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignOut.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignOut.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/SignUp.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/ViewFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/ViewFriends.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/ViewGifts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/ViewGifts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/Bmob-1.6.6.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/DBUtil/Gifts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/encrypt/CsrfFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/encrypt/CsrfFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/MostCommon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/OrientedEdge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img10Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img1Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img2Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img3Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img4Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img5Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img6Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img7Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img8Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/img9Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/man.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/man1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/manBand1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/manBand2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/manBand3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/manBand4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/manTest1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/mangray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/classes/imageTest/source.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/20160705160847.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/2017_UWL_International_Banquet_0012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0102.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0111.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0126.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0129.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0144.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0249.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0254.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_0413.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/IMG_2339.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60529-153645.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60530-114605.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60530-121131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60530-210649.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60602-121957.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60602-142450.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60607-115520.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/P60609-212209.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/gitCommand.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/laji.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/photo for VISA.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Test2_war_exploded/img/图片1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/DBUtil/Gifts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/encrypt/CsrfFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Test2/encrypt/CsrfFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/MostCommon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/OrientedEdge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img10Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img1Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img2Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img3Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img4Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img5Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img6Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img7Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img8Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/img9Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/man.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/man1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/manBand1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/manBand2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/manBand3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/manBand4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/manTest1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/mangray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Test2/imageTest/source.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBUtil/Gifts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/encrypt/CsrfFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/encrypt/CsrfFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/MostCommon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/OrientedEdge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img10Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img1Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img2Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img3Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img4Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img5Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img6Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img7Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img8Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9BottomLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9BottomRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9Down.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9Left.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9Right.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9TopLeft.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9TopRight.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/img9Up.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/man.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/man1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/manBand1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/manBand2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/manBand3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/manBand4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/manTest1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/mangray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imageTest/source.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/AddFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/AddFriends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/CheckSignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/CheckSignIn.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/EditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/EditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/SignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/SignIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/SignOut.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/SignOut.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/SignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/ViewFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ViewFriends.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/ViewGifts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ViewGifts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/Bmob-1.6.6.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/20160705160847.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/2017_UWL_International_Banquet_0012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0102.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0111.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0126.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0129.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0144.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0249.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0254.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_0413.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/IMG_2339.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60529-153645.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60530-114605.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60530-121131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60530-210649.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60602-121957.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60602-142450.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60607-115520.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/P60609-212209.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/gitCommand.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/laji.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/photo for VISA.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/图片1.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -405,29 +29,30 @@
     <session id="1063464919">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.23" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JPG" value="1" />
           <entry key="gif" value="2" />
-          <entry key="java" value="10" />
-          <entry key="jpg" value="13" />
+          <entry key="java" value="11" />
+          <entry key="jpg" value="15" />
           <entry key="js" value="7" />
-          <entry key="jsp" value="16" />
-          <entry key="png" value="6" />
+          <entry key="jsp" value="19" />
+          <entry key="png" value="9" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="22" />
-          <entry key="JAVA" value="10" />
-          <entry key="JSP" value="16" />
+          <entry key="Image" value="27" />
+          <entry key="JAVA" value="11" />
+          <entry key="JSP" value="19" />
           <entry key="JavaScript" value="7" />
           <entry key="XML" value="2" />
         </counts>
@@ -436,14 +61,14 @@
         <counts>
           <entry key="java" value="2" />
           <entry key="js" value="35" />
-          <entry key="jsp" value="3632" />
+          <entry key="jsp" value="4270" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="12" />
           <entry key="JAVA" value="2" />
-          <entry key="JSP" value="3620" />
+          <entry key="JSP" value="4258" />
           <entry key="JavaScript" value="35" />
         </counts>
       </usages-collector>
@@ -451,14 +76,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ViewGifts.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="116" column="77" selection-start-line="116" selection-start-column="77" selection-end-line="116" selection-end-column="77" />
-              <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="1359">
+              <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -466,13 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/EditProfile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2225">
-              <caret line="200" column="28" lean-forward="true" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="438">
+              <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -480,37 +106,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ViewFriends.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="57" column="79" lean-forward="true" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
-              <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="-1038">
+              <caret line="43" column="23" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/AddFriends.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/SignUp.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="141" column="13" lean-forward="true" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-50">
+              <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -518,11 +124,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="69" lean-forward="true" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+            <state relative-caret-position="100">
+              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/SignIn.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="63" column="69" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/SignOut.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -564,9 +188,11 @@
       <find>Gifts</find>
       <find>inputUsername3</find>
       <find>1</find>
-      <find>por</find>
-      <find>table</find>
       <find>active</find>
+      <find>por</find>
+      <find>console</find>
+      <find>password</find>
+      <find>table</find>
     </findStrings>
     <replaceStrings>
       <replace>2</replace>
@@ -610,7 +236,6 @@
         <option value="$PROJECT_DIR$/web/test.jsp" />
         <option value="$PROJECT_DIR$/web/message.jsp" />
         <option value="$PROJECT_DIR$/web/upload.jsp" />
-        <option value="$PROJECT_DIR$/web/Index.jsp" />
         <option value="$PROJECT_DIR$/src/DBUtil/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/Servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/web/CreateGifts.jsp" />
@@ -627,12 +252,13 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/SignOut.jsp" />
         <option value="$PROJECT_DIR$/web/SignIn.jsp" />
-        <option value="$PROJECT_DIR$/web/ViewFriends.jsp" />
         <option value="$PROJECT_DIR$/web/SignUp.jsp" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/web/EditProfile.jsp" />
         <option value="$PROJECT_DIR$/web/AddFriends.jsp" />
+        <option value="$PROJECT_DIR$/web/ViewFriends.jsp" />
         <option value="$PROJECT_DIR$/web/ViewGifts.jsp" />
+        <option value="$PROJECT_DIR$/web/Index.jsp" />
       </list>
     </option>
   </component>
@@ -709,12 +335,6 @@
             <path>
               <item name="Test2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test2" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Test2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Test2" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -727,7 +347,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545026569207" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545087116694" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="D:/software/Node.js/node" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -1129,7 +749,8 @@
       <workItem from="1528142709333" duration="869000" />
       <workItem from="1543961529590" duration="34278000" />
       <workItem from="1544477333659" duration="610000" />
-      <workItem from="1544825213095" duration="41465000" />
+      <workItem from="1544825213095" duration="50451000" />
+      <workItem from="1545152259654" duration="4176000" />
     </task>
     <task id="LOCAL-00001" summary="233">
       <created>1511669686990</created>
@@ -1156,10 +777,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394533000" />
+    <option name="totallyTimeSpent" value="407695000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Capture Tool" order="0" />
@@ -1167,7 +788,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Web" order="3" sideWeight="0.2948113" side_tool="true" weight="0.21406959" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.7051887" visible="true" weight="0.114605546" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.7051887" visible="true" weight="0.1763754" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.20574887" side_tool="true" weight="0.2557377" />
@@ -1178,7 +799,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32786885" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49394855" weight="0.3848684" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.79425114" visible="true" weight="0.29501083" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.79425114" visible="true" weight="0.13345195" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.6838124" weight="0.23848684" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -1194,6 +815,39 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Capture Tool" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Web" order="3" sideWeight="0.2948113" side_tool="true" weight="0.21406959" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.7051887" visible="true" weight="0.1763754" />
+      <window_info id="Structure" order="6" weight="0.25" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.20574887" side_tool="true" weight="0.2557377" />
+      <window_info anchor="bottom" id="Application Servers" order="1" weight="0.32786885" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.4364599" weight="0.28850326" />
+      <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32786885" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32786885" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49394855" weight="0.3848684" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.79425114" weight="0.5836299" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.6838124" weight="0.23848684" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1226,7 +880,7 @@
           <url>file://$PROJECT_DIR$/src/encrypt/CsrfFilter.java</url>
           <line>31</line>
           <properties />
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/encrypt/CsrfFilter.java</url>
@@ -1301,22 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBUtil/Gifts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/2017_UWL_International_Banquet_0012.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/20160705160847.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBUtil/Gifts.java" />
+    <entry file="file://$PROJECT_DIR$/web/img/3.png" />
+    <entry file="file://$PROJECT_DIR$/web/img/2017_UWL_International_Banquet_0012.jpg" />
+    <entry file="file://$PROJECT_DIR$/web/img/20160705160847.jpg" />
     <entry file="file://$PROJECT_DIR$/web/img/cup.JPG">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1332,29 +974,7 @@
     <entry file="file://$PROJECT_DIR$/web/img/laptop.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/p1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/laji.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/encrypt/CsrfFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/laji.png" />
     <entry file="file://$PROJECT_DIR$/web/error.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1370,15 +990,9 @@
         <state relative-caret-position="-1500" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/gitCommand.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/1.png" />
+    <entry file="file://$PROJECT_DIR$/web/img/2.png" />
+    <entry file="file://$PROJECT_DIR$/web/img/gitCommand.jpg" />
     <entry file="file://$PROJECT_DIR$/web/img/giftbox.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1387,20 +1001,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/img/img.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/SignIn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="112" column="127" selection-start-line="112" selection-start-column="119" selection-end-line="112" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/SignOut.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test.jsp">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1449,57 +1049,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/p1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/p2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/p3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/p4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="69" lean-forward="true" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        <state relative-caret-position="100">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/SignOut.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/encrypt/CsrfFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/SignIn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="63" column="69" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/EditProfile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2225">
-          <caret line="200" column="28" lean-forward="true" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="438">
+          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/ViewFriends.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="57" column="79" lean-forward="true" selection-start-line="57" selection-start-column="79" selection-end-line="57" selection-end-column="79" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/AddFriends.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1038">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/ViewGifts.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="116" column="77" selection-start-line="116" selection-start-column="77" selection-end-line="116" selection-end-column="77" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="1359">
+          <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/AddFriends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
         </state>
       </provider>
     </entry>
