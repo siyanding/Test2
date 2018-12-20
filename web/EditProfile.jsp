@@ -51,10 +51,8 @@
             url: "https://api2.bmob.cn/1/users/<%=userObjectId%>",
             success: function(msg) {
                 console.log("json" + msg.username);
-                document.getElementById("inputUsername3").value=msg.username;
                 document.getElementById("inputPassword3").value=msg.password;
                 document.getElementById("inputRepeatPassword3").value=msg.password;
-                document.getElementById("inputEmail3").value=msg.email;
                 console.log(msg);
                 console.log("success");
             }
@@ -74,9 +72,8 @@
             alert("Email can not be null！");
         }
         var da = {
-            username: document.getElementById("inputUsername3").value,
             password: document.getElementById("inputPassword3").value,
-            email: document.getElementById("inputEmail3").value,};
+           };
         $.ajax({
             type: "PUT",
             beforeSend: function(request) {
@@ -92,17 +89,16 @@
             success: function(msg) {
                 alert("Profile has been updated！");
                 console.log(msg);
-                console.log(<%=name%>);
+                console.log('<%=name%>');
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
 
 </script>
-<%
-    token = (String) session.getAttribute("csrftoken");
-    System.out.println("ViewGifts:" + token);
-    System.out.println("ViewGiftsToken:" + (String)request.getParameter("csrftoken"));
-%>
 <%
     if(name!=null){
 %>
@@ -197,20 +193,20 @@
 
 <form class="form-horizontal container col-md-6 col-md-offset-3" style="padding-top: 11em">
     <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Edit Profile</label>
+        <label for="inputPassword3" class="col-sm-2 control-label">Edit Profile</label>
     </div>
-    <div class="form-group">
-        <label for="inputUsername3" class="col-sm-2 control-label">username</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputUsername3" placeholder="Username">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-        </div>
-    </div>
+    <%--<div class="form-group">--%>
+        <%--<label for="inputUsername3" class="col-sm-2 control-label">username</label>--%>
+        <%--<div class="col-sm-10">--%>
+            <%--<input type="text" class="form-control" id="inputUsername3" placeholder="Username">--%>
+        <%--</div>--%>
+    <%--</div>--%>
+    <%--<div class="form-group">--%>
+        <%--<label for="inputEmail3" class="col-sm-2 control-label">Email</label>--%>
+        <%--<div class="col-sm-10">--%>
+            <%--<input type="email" class="form-control" id="inputEmail3" placeholder="Email">--%>
+        <%--</div>--%>
+    <%--</div>--%>
     <div class="form-group">
         <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
@@ -225,7 +221,7 @@
     </div>
 </form>
 
-<div class="col-sm-offset-2 col-sm-10">
+<div class="col-sm-offset-6 col-sm-4">
     <button type="submit" class="btn btn-default" onclick="updateProfile()">Save</button>
 </div>
 

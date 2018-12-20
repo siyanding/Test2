@@ -75,9 +75,17 @@
                                 }
                             }
                         }
+                    },
+                    error: function (err) {
+                        console.log(err)
+                        alert(err.responseJSON.error)
                     }
                 });
                 console.log(msg);
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
@@ -109,10 +117,18 @@
                               alert("delete success");
                               location.reload();
 
+                          },
+                          error: function (err) {
+                              console.log(err)
+                              alert(err.responseJSON.error)
                           }
                       });
                   }
                 }
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }

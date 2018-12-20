@@ -52,7 +52,7 @@
 <%
     name = request.getParameter("username");//(String)session.getAttribute("username");
     sessionToken = request.getParameter("sessionToken");
-    userObjectId = request.getParameter("objectId");
+    userObjectId = request.getParameter("userObjectId");
     token = (String) session.getAttribute("csrftoken");
     System.out.println("ViewGifts:" + token);
     System.out.println("ViewGiftsToken:" + (String)request.getParameter("csrftoken"));
@@ -85,6 +85,10 @@
                         '<input type="checkbox" '+checked +' id="checkBox" disabled></td></tr>';
                     $("#table tbody").append(row);
                 }
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
@@ -116,6 +120,10 @@
                     }
                 }
                 console.log(""+<%=name%>);
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }

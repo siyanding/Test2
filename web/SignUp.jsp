@@ -66,12 +66,12 @@
                 dataType: "json",
                 url: "https://api2.bmob.cn/1/users",
                 success: function(msg) {
-                    window.location.href="ViewGifts.jsp?username=" + msg.username;
+                    window.location.href="ViewGifts.jsp?username=" + msg.username +"&sessionToken=" + msg.sessionToken + "&objectId=" + msg.objectId;
                     console.log(msg);
                     console.log(msg.username);
                 },
-                error:function(XMLHttpRequest, textStatus, errorThrown){
-
+                error:function(err){
+                    alert(err.responseJSON.error)
                 }
             });
         }

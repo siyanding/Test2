@@ -76,7 +76,7 @@
     </div>
 </form>
 <div class="form-horizontal col-md-6 col-md-offset-3">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="col-sm-offset-6 col-sm-4">
         <button type="submit" class="btn btn-default" id="btn" onclick="isValid()">Sign in</button>
     </div>
 </div>
@@ -110,9 +110,13 @@
                 // session.setAttribute("username",msg.username);
                 // $.cookie("username",msg.username);
 
-                window.location.href="ViewGifts.jsp?username=" + msg.username +"&sessionToken=" + msg.sessionToken + "&objectId=" + msg.objectId;
+                window.location.href="ViewGifts.jsp?username=" + msg.username +"&sessionToken=" + msg.sessionToken + "&userObjectId=" + msg.objectId;
                 console.log(msg);
                 console.log(msg.username);
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }

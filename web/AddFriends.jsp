@@ -75,8 +75,16 @@
                             }
                             tag = false;
                         }
+                    },
+                    error: function (err) {
+                        console.log(err)
+                        alert(err.responseJSON.error)
                     }
                 });
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
@@ -106,6 +114,10 @@
                 alert("add success");
                 location.reload();
                 console.log(things.id + "is your friend now");
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
@@ -150,8 +162,16 @@
                             }
                             tag = false;
                         }
+                    },
+                    error: function (err) {
+                        console.log(err)
+                        alert(err.responseJSON.error)
                     }
                 });
+            },
+            error: function (err) {
+                console.log(err)
+                alert(err.responseJSON.error)
             }
         });
     }
