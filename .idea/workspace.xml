@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e860c1-2693-4141-82eb-4f6ec12baf64" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/AddFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/AddFriends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/EditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/EditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/SignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/SignIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/SignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ViewFriends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ViewFriends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ViewGifts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ViewGifts.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="e8e860c1-2693-4141-82eb-4f6ec12baf64" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +18,7 @@
     <session id="1063464919">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -278,7 +271,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -747,7 +740,7 @@
       <workItem from="1543961529590" duration="34278000" />
       <workItem from="1544477333659" duration="610000" />
       <workItem from="1544825213095" duration="50451000" />
-      <workItem from="1545152259654" duration="9709000" />
+      <workItem from="1545152259654" duration="10616000" />
     </task>
     <task id="LOCAL-00001" summary="233">
       <created>1511669686990</created>
@@ -774,18 +767,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="413228000" />
+    <option name="totallyTimeSpent" value="414135000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Web" order="3" sideWeight="0.2948113" side_tool="true" weight="0.21406959" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.7051887" visible="true" weight="0.116204694" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.7051887" visible="true" weight="0.1763754" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.20574887" side_tool="true" weight="0.2557377" />
@@ -796,7 +788,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32786885" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49394855" weight="0.3848684" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.79425114" visible="true" weight="0.0813449" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.79425114" weight="0.39323843" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.6838124" weight="0.23848684" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
